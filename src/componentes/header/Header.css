@@ -1,0 +1,41 @@
+header{
+    background-color: #4679e6;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10vw;
+    align-items: center;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid rgb(83, 62, 203);
+    color: white;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+header nav ul li a:hover{
+    background-color: #305fb0;
+    border-radius: 5px;
+    transition: 1s;
+
+}
+
+img {
+    width: 180px;
+    height: 200;
+    vertical-align: middle;
+    margin-left: 120px;
+    margin-top: 15px;
+  }
+  header p {
+    font-size: 18px;
+    margin: 5px 0;
+    margin-left: 130px;
+    margin-top: 20px;
+    cursor: default;
+  }  
