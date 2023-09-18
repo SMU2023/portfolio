@@ -8,6 +8,7 @@ function Main(){
             <div className="interface">
                 <div className="flex">
                     <div className="txt-topo-site">
+                        /*titulo */
                         <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
                         <p>Olá sou Samuel da SIlva Ortega estudante do Instituto Federal de Mato Grosso do Sul - IFMS, seja bem vindo ao meu portifólio onde
                            criatividade e inovação andam lado a lado com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar o projeto online dos seus sonhos.</p>
