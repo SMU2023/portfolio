@@ -1,14 +1,42 @@
-import './Main.css'
-function Main(){   
-   return(
+import { useState } from 'react';
+import './Main.css';
+
+function Main() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const especialidades = [
+    {
+      id: 1,
+      title: 'Website',
+      description: 'Minha missão é transformar ideias em realidade digital. Com criatividade e técnicas inovadoras, crio websites cativantes que elevam a presença online dos meus clientes. Vamos destacar sua marca na web!',
+      image: '/ubs.png' // Adicione o caminho para a imagem do website
+    },
+    {
+      id: 2,
+      title: 'Loja online',
+      description: 'Combinando design atrativo e funcionalidade sólida, estou aqui para construir a plataforma perfeita para impulsionar o seu negócio na internet. Vamos transformar visitantes em clientes satisfeitos!',
+      image: '/lojaonline.png' // Adicione o caminho para a imagem da loja online
+    },
+    {
+      id: 3,
+      title: 'Blog',
+      description: 'Tenho experiencia no desenvolvimento de blogs que realmente marcam presença. Se você busca compartilhar suas ideias ou conhecimentos de forma envolvente e acessível, estou aqui para transformar sua visão em um blog atraente e funcional. Vamos criar um espaço digital que inspire e informe!',
+      image: '/blog.png' // Adicione o caminho para a imagem do blog
+    },
+    // Adicione mais especialidades conforme necessário
+  ];
+
+  const filteredEspecialidades = especialidades.filter((especialidade) =>
+    especialidade.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
     <div>
-          
-          
-          <section className="topo-do-site">
-            <div className="interface">
+      <section className="topo-do-site">
+      <div className="interface">
                 <div className="flex">
                     <div className="txt-topo-site">
-                        /*titulo */
+                        
                         <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
                         <p>Olá sou Samuel da SIlva Ortega estudante do Instituto Federal de Mato Grosso do Sul - IFMS, seja bem vindo ao meu portifólio onde
                            criatividade e inovação andam lado a lado com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto para criar o projeto online dos seus sonhos.</p>
@@ -25,53 +53,46 @@ function Main(){
                     </div>
                 </div>
             </div>
-        </section>
+      </section>
 
-        <section className="especiliadades">
-            <div className="interface">
-                <h2 className="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-                <div className="flex">
-                    <div className="especialidades-box">
-                        <i className="bi bi-code-square"></i>
-                        <h3>Website</h3>
-                        <p>Minha missão é transformar ideias em realidade digital. 
-                        Com criatividade e técnicas inovadoras, crio websites cativantes que elevam a presença online dos meus clientes. 
-                        Vamos destacar sua marca na web!</p>
-                    </div>
-
-                    <div className="especialidades-box">
-                        <i className="bi bi-cart"></i>
-                        <h3>Loja online</h3>
-                        <p>Combinando design atrativo e funcionalidade sólida, estou aqui para construir a plataforma perfeita para impulsionar o seu negócio na internet. 
-                        Vamos transformar visitantes em clientes satisfeitos!</p>
-                    </div>
-
-                    <div className="especialidades-box">
-                        <i className="bi bi-wordpress"></i>
-                        <h3>Blog</h3>
-                        <p> Tenho experiencia no desenvolvimento de blogs que realmente marcam presença. 
-                        Se você busca compartilhar suas ideias ou conhecimentos de forma envolvente e acessível, estou aqui para transformar sua visão em um blog atraente e funcional. 
-                        Vamos criar um espaço digital que inspire e informe!</p>
-                    </div>
+      <section className="especiliadades">
+        <div className="interface">
+          <h2 className="titulo">
+            MINHAS <span>ESPECIALIDADES.</span>
+          </h2>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Pesquisar especialidades..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="flex">
+            {filteredEspecialidades.map((especialidade) => (
+              <div className="especialidades-box" key={especialidade.id}>
+                <div className="especialidade-image">
+                  <img src={especialidade.image} alt={especialidade.title} />
                 </div>
-            </div>
-        </section>
+                <h3>{especialidade.title}</h3>
+                <p>{especialidade.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <section className="sobre">
+      <section className="sobre">
+        {/* ... Seu código existente ... */}
+      </section>
 
-        </section>
-
-        <section className="portfolio">
-            <div className="interface">
-                <h2 className="titulo">MEU <span>PORTFÓLIO.</span></h2>
+      <section className="portfolio">
+      <div className="interface">
                
-            </div>
-        </section>
-
-      
+               </div>
+      </section>
     </div>
-   
-   ) 
-    
+  );
 }
-export default Main
+
+export default Main;
