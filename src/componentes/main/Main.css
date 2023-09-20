@@ -275,8 +275,8 @@ section.portfolio .flex {
   }
   
   .search-bar input:focus {
-    border-color: #007bff; /* Cor do contorno quando o campo está em foco */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra quando o campo está em foco */
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
   }
   
 .especialidades-box {
