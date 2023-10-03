@@ -9,7 +9,7 @@ function Main() {
       id: 1,
       title: 'Website',
       description: 'Minha missão é transformar ideias em realidade digital. Com criatividade e técnicas inovadoras, crio websites cativantes que elevam a presença online dos meus clientes. Vamos destacar sua marca na web!',
-      image: '/ubs.png' // Adicione o caminho para a imagem do website
+      image: '/ubs.png' // Adiciona o caminho para a imagem do website
     },
     {
       id: 2,
@@ -21,9 +21,9 @@ function Main() {
       id: 3,
       title: 'Blog',
       description: 'Tenho experiencia no desenvolvimento de blogs que realmente marcam presença. Se você busca compartilhar suas ideias ou conhecimentos de forma envolvente e acessível, estou aqui para transformar sua visão em um blog atraente e funcional. Vamos criar um espaço digital que inspire e informe!',
-      image: '/blog.png' // Adicione o caminho para a imagem do blog
+      image: '/blog.png' // Adiciona o caminho para a imagem do blog
     },
-    // Adicione mais especialidades conforme necessário
+
   ];
 
   const filteredEspecialidades = especialidades.filter((especialidade) =>
