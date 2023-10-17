@@ -2,60 +2,45 @@
   margin: 0px;
 }
 body{
-  background-color:#81abde;
+  background-color:#1b5baa;
 }
 p{
   color: white;
   font-size:2rem;
 }
 
+/* Estilos para o container do formulário de contato */
 .container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #A3CEEF;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 100px;
-}
- 
-h1 {
-  font-size: 24px;
-  color: #00609c;
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-div {
-  margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="number"],
-select {
-  width: 100%;
-  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  margin-top: 40px;
 }
 
+/* Estilos para os campos de entrada */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para o botão de envio */
 input[type="submit"] {
-  background-color: #00609c;
+  background-color: #007bff;
   color: #fff;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 18px;
 }
 
-input[type="submit"]:hover {
-  background-color: #006DB2;
+/* Estilos para os parágrafos abaixo dos campos */
+p {
+  font-size: 14px;
+  margin: 5px 0;
 }
