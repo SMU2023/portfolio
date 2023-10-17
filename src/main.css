@@ -46,10 +46,6 @@ select {
   font-size: 16px;
 }
 
-select {
-  height: 40px;
-}
-
 input[type="submit"] {
   background-color: #00609c;
   color: #fff;
